@@ -5,10 +5,10 @@ const mongoose = require("mongoose");
 const fileUpload = require("express-fileupload");
 
 const cors = require("cors");
-app.use(cors());
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(process.env.MONGODB_URI);
 
